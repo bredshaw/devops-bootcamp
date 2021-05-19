@@ -7,8 +7,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Build node.js module'
                 sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'run defined test cases'
+                sh 'npm test'
             }
         }
     }
