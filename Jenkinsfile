@@ -17,5 +17,12 @@ pipeline {
                 sh 'npm test'
             }
         }
+//        stage('SonarScan') {
+//            steps {
+//              withSonarQubeEnv('My SonarQube Server') {
+//                 sh 'mvn clean package sonar:sonar'
+//              }            
+//            }
+//        }
     }
 }
